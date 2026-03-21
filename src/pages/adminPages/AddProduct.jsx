@@ -48,20 +48,20 @@ function AddProduct() {
 
   return (
     <>
-      <div className="bg-admin flex flex-col overflow-auto p-4">
-        <main className="bg-card mx-auto w-full overflow-x-auto rounded-xl border p-6 shadow ring-1">
-          <div className="mb-6 flex w-full items-center gap-3">
+      <div className="flex flex-col p-4 overflow-auto bg-admin">
+        <main className="w-full p-6 mx-auto overflow-x-auto border shadow bg-card rounded-xl ring-1">
+          <div className="flex items-center w-full gap-3 mb-6">
             <BackButton label="" className="py-6 ring-1" />
 
             <div className="flex flex-col">
-              <span className="text-lighter text-sm">Create a new product for the menu</span>
+              <span className="text-sm text-lighter">Create a new product for the menu</span>
               <h1 className="flex items-center gap-1 text-xl font-bold">Add Product</h1>
             </div>
           </div>
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="mx-auto grid w-full max-w-full grid-cols-1 gap-8 md:grid-cols-2"
+            className="grid w-full max-w-full grid-cols-1 gap-8 mx-auto md:grid-cols-2"
           >
             <div className="flex flex-col gap-7 rounded-xl">
               <RHFTextInput
@@ -143,7 +143,7 @@ function AddProduct() {
               </Button>
             </div>
 
-            <div className="flex h-full flex-col items-center justify-center rounded-xl p-8 ring-1">
+            <div className="flex flex-col items-center justify-center h-full p-8 rounded-xl ring-1">
               {watch('image') ? (
                 <img
                   src={watch('image')}
@@ -151,8 +151,8 @@ function AddProduct() {
                   className="h-full max-h-[500px] w-auto rounded-lg object-cover shadow"
                 />
               ) : (
-                <div className="flex h-full w-full items-center justify-center rounded-lg border-2 border-dashed border-gray-300 text-gray-400">
-                  No image uploaded
+                <div className="flex items-center justify-center w-full h-full text-gray-400 border-2 border-gray-300 border-dashed rounded-lg">
+                  No image uploaded...
                 </div>
               )}
             </div>
