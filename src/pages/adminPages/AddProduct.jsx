@@ -152,7 +152,7 @@ function AddProduct() {
                 />
               ) : (
                 <div className="flex items-center justify-center w-full h-full text-gray-400 border-2 border-gray-300 border-dashed rounded-lg">
-                  No image uploaded...
+                  No image uploaded.....
                 </div>
               )}
             </div>
