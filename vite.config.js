@@ -31,13 +31,13 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         '/api': {
-          target: 'http://localhost:3000/',
+          target: 'https://alas-backend-clone-q4bv.onrender.com',
           changeOrigin: true,
           secure: false,
           ws: true,
         },
         '/socket.io/': {
-          target: 'http://localhost:3000',
+          target: 'https://alas-backend-clone-q4bv.onrender.com',
           changeOrigin: true,
           secure: false,
           ws: true,
